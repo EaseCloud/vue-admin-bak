@@ -1,0 +1,4 @@
+[submodule "iview-admin"]
+	path = iview-admin
+	url = https://github.com/iview/iview-admin
+	branch = master

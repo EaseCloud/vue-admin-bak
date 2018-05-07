@@ -1,0 +1,24 @@
+{
+  "name": "vue-admin",
+  "version": "1.0.0",
+  "description": "Vue Admin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easecloud/vue-admin.git"
+  },
+  "keywords": [
+    "vue",
+    "admin",
+    "data-driven"
+  ],
+  "author": "fish-ball",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/easecloud/vue-admin/issues"
+  },
+  "homepage": "https://github.com/easecloud/vue-admin#readme",
+}
