@@ -30,9 +30,13 @@ cd ../../
 #echo $DEP
 #echo $DEV_DEP
 
+npm i
 npm i --save $DEP
 npm i --save-dev $DEV_DEP
 
 #read_packages iview-admin/package.json '"devDependencies"'
 
 # init
+cd src/vue-admin/iview-admin
+npm i
+npm run init

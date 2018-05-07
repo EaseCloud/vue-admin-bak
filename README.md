@@ -8,6 +8,13 @@ By @fish-ball &copy;2018
 ### 安装 Installation
 
 \[TODO\]
+##### 创建 vue 基础项目
+
+跟正常的 vue 项目一样
+
+```bash
+vue init webpack
+```
 
 ##### 替换 iview-admin 中的 `@` 路径
 
@@ -52,16 +59,20 @@ module.exports = {
 }
 ```
 
-##### 初始化内部引入的 iview-admin 库
+##### 初始化
+
+这一步，我们需要将 iview-admin 的依赖库全部展开安装到我们的主项目中，并且\
+执行 iview-admin 的 `npm run init` 初始化脚本。
+
+> iview-admin 初始化完成之后，iview-admin 文件夹的 build 文件夹中会出现一个 `env.js` 文件。\
+如果提示缺少 env 文件很可能是少了这一步。
+
+这里的操作已经用 bash 脚本写好，只需要执行一次脚本即可：
 
 ```bash
-cd src/vue-admin/iview-admin
-npm i
-npm run init
+cd src/vue-admin
+./init.sh
 ```
-
-> 完成之后，iview-admin 文件夹的 build 文件夹中会出现一个 `env.js` 文件。\
-如果提示缺少 env 文件很可能是少了这一步。
 
 ##### 问题处置：`$export is not a function`
 
@@ -77,16 +88,6 @@ npm run init
   exclude: /node_modules/
   // ...
 }
-```
-
-##### 问题处置：`_vue2.default.locale is not a function`
-
-参考：<https://github.com/kazupon/vue-i18n/issues/28#issuecomment-284190656>
-
-在外面强制替换 `vue-i18n` 的版本：
-
-```bash
-npm install -S vue-i18n^5.0.3
 ```
 
 ### 配置 Configuration
